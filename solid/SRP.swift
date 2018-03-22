@@ -19,6 +19,15 @@ class Journal: CustomStringConvertible {
     var description: String {
         return entries.joined(separator: "\n")
     }
+
+    func save(_ filename: String, _ overwrite: Bool == false) {
+    }
+    func load(_ filename: String) {
+
+    }
+    func load(_ uri: URI) {
+
+    }
 }
 
 func main(){
