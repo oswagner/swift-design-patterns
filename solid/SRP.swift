@@ -20,12 +20,18 @@ class Journal: CustomStringConvertible {
         return entries.joined(separator: "\n")
     }
 
+    // that's wrong!!
     func save(_ filename: String, _ overwrite: Bool == false) {
     }
     func load(_ filename: String) {
-
     }
     func load(_ uri: URI) {
+    }
+}
+
+class Persistence {
+    // that's correct
+    func saveToFile(_ journal: Journal,_ filename: String, _ overwrite: Bool == false) {
 
     }
 }
@@ -41,6 +47,10 @@ func main(){
     print("===")
     print(j) 
     
+
+    let p = Persistence()
+    let filename = "/bla/blablabla.txt"
+    p.saveToFile(j, filename, false)
     
 }
 
